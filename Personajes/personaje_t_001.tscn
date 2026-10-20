@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bun43vpsl7jht"]
+
+[ext_resource type="PackedScene" uid="uid://d2qkwmy800olr" path="res://Personajes/PersonajeT001.glb" id="1_1o8gr"]
+[ext_resource type="PackedScene" uid="uid://sjak1dlbwye6" path="res://Armas/Hacha.glb" id="2_6780c"]
+
+[node name="PersonajeT001" unique_id=72680552 instance=ExtResource("1_1o8gr")]
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Esqueleto/Skeleton3D" parent_id_path=PackedInt32Array(484313029) index="1" unique_id=1164975831]
+transform = Transform3D(0.049488984, -0.995859, 0.0762563, 0.99877393, 0.049396966, -0.0030930324, -0.00068660575, 0.07631592, 0.9970833, -0.9351227, 0.8452508, -1.763781e-08)
+bone_name = "handR"
+bone_idx = 25
+
+[node name="Hacha" parent="Esqueleto/Skeleton3D/BoneAttachment3D" index="0" unique_id=2010615619 instance=ExtResource("2_6780c")]
+transform = Transform3D(0.15326759, 0.21192187, 0.6493059, 0.6744284, 0.058229145, -0.17820266, -0.107962236, 0.6646042, -0.19143055, -0.04931575, 0.5015395, 0.16153006)

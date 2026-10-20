@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cy3rmldfvxsh"]
+
+[ext_resource type="Script" uid="uid://2b4urwxmlsuk" path="res://Personajes/ScriptsP/jugador.gd" id="1_16k11"]
+[ext_resource type="PackedScene" uid="uid://bun43vpsl7jht" path="res://Personajes/personaje_t_001.tscn" id="2_omvyu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i33ed"]
+height = 2.8601532
+
+[node name="Jugador" type="CharacterBody3D" unique_id=220843278]
+script = ExtResource("1_16k11")
+
+[node name="PersonajeT001" parent="." unique_id=79982743 instance=ExtResource("2_omvyu")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.02187097, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=191257094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07637787, 0)
+shape = SubResource("CapsuleShape3D_i33ed")
+
+[node name="PivoteCamara" type="Node3D" parent="." unique_id=1419633933]
+transform = Transform3D(1, 0, 0, 0, 0.91838676, -0.39568388, 0, 0.39568388, 0.91838676, 0, 2, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="PivoteCamara" unique_id=641111775]
+spring_length = 4.0
+
+[node name="Camera3D" type="Camera3D" parent="PivoteCamara/SpringArm3D" unique_id=1688485274]
+transform = Transform3D(1, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0)
+current = true
+fov = 75.525246
